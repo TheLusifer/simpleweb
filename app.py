@@ -1,5 +1,6 @@
 from bottle import get, run, template, static_file, debug, route, request, post, redirect
 import dataset
+import os
 
 #definimos la conexion a la base de datos
 db = dataset.connect('sqlite:///labs.db')
@@ -52,6 +53,7 @@ def link_submit():
 
 
 
-
-
-run(host='localhost', port=8080, reloader=True)
+if os.environ.get('APP_LOCATION') == 'heroku':
+    run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+else:
+    run(host='localhost', port=8080, reloader=True)

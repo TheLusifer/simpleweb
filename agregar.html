@@ -1,0 +1,43 @@
+% include('header.tpl')
+
+
+<div id="contenido">   
+
+    
+
+    <div class="formulario">
+        <h1>AGREGA TU LINK</h1>
+        <form method="post" action="/agregar2">
+
+            <div class="formpar">
+            <input type="text" id="name" name="name" placeholder="Escribe tu Nombre" data-required="true" data-error-message="Escribe tu nombre">
+            </div>
+
+            <div class="formpar">            
+            <input type="text" id="desc" name="desc" placeholder="Descripción de tu link" data-required="true" data-error-message="Escribe la descripción o se te olvidara">
+            </div>
+
+            <div class="formpar">            
+            <input type="text" id="link" name="link" placeholder="URL de la web (LINK)" data-required="true" data-error-message="Necesitas poner un Link 'URL' ">
+            </div>
+
+            <div class="formpar">   
+            <input type="submit" value="Register">
+            </div>
+
+        </form>
+
+
+
+    </div>
+</div>
+
+
+
+
+% include('footer.tpl')
+
+
+
+
+

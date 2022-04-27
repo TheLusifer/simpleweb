@@ -1,0 +1,40 @@
+% include('header.tpl')
+
+
+      <div id="contenido">
+      
+          <div class="espaciado">  
+          </div>
+        
+        
+          <div class="listado">
+              <h1>LISTADO DE LINKS</h1>
+          
+
+              <table class="tabladatos">
+                  <tr>          
+                    <th class="uno">Nombre</th>          
+                    <th class="dos">Descripción</th>          
+                    <th>Link/URL</th>                  
+                  </tr>
+              % for row in result:          
+                  <tr>          
+                    <td class="uno"> {{row['name']}} </td>          
+                    <td class="dos">{{row['desc']}}</td>          
+                    <td>{{row['link']}}</td>          
+                  </tr>    
+                  %end
+                
+                </table>
+              
+              
+              
+          </div>
+      </div>
+    </body>
+    % include('footer.tpl')
+
+
+
+
+

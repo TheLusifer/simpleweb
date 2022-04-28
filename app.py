@@ -1,6 +1,7 @@
 from bottle import get, run, template, static_file, debug, route, request, post, redirect
 import dataset
 import os
+import gunicorn
 
 #definimos la conexion a la base de datos
 db = dataset.connect('sqlite:///labs.db')
@@ -51,5 +52,6 @@ def link_submit():
     return redirect('/agregar')
 
 
-
+if __name__ == '__main__':
+    run(host='0.0.0.0', port=8000, debug=True, reloader=True)
 
